@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> <!-- XML Declaration, defines XML version and the encoding used -->
+<formular> <!-- root element -->
+<vorname></vorname>
+<nachname></nachname>
+<email></email>
+<geburtsdatum></geburtsdatum>
+<erfahrung></erfahrung>
+<schlagzeug></schlagzeug>
+<anmerkung></anmerkung>
+
+</formular>
