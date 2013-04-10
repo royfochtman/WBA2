@@ -1,0 +1,47 @@
+b) Betrachten Sie nun andere Rezepte auf der Webseite 
+http://www.chefkoch.de. Beschreiben Sie welche Gemeinsamkeiten 
+die Rezepte hinsichtlich ihrer Daten haben und worin Sie sich 
+unterscheiden.
+
+Alle Rezepte haben:
+- einen Titel/Namen
+- 1 oder mehr Bilder
+- eine Liste mit Zutaten
+- Anzahl der Portionen
+- Zubereitungsbeschreibung
+	- Arbeitszeit
+	- Schwierigkeitsgrad
+	- Brennwert
+	- Schritte
+	
+c)
+
+Welche Daten müssen in simple und welche in complex-types abgebildet werden?
+Für welche Daten ist die Abbildung in Attributen sinnvoller?
+Welche Datentypen müssen für die Elemente definiert werden?
+Welche Restriktionen müssen definiert werden?
+
+Simple-types:
+- Titel/Name
+- Zutatname
+- Anzahl der Portionen
+- Schritte
+
+Complex-types:
+- Bilder
+- Liste mit zutaten
+
+Datentypen:
+- Titel/Name: String
+- Zutat:
+	- Anzahl/Menge: Integer
+	- Einheit:
+	- Zutatname: String
+- Portionen: Integer
+- Zubereitung:
+	- Arbeitszeit:
+		- Anzahl: Integer (zw 0 und 60)
+		- Zeit: Min, Std
+	- Schwierigkeitsgrad: simpel, normal, schwer
+	- Brennwert: Integer
+	

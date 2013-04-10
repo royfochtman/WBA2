@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/aufgabe3_teil_d" xmlns="http://www.example.org/aufgabe3_teil_d" elementFormDefault="qualified">
+<xs:element name="rezeptliste">
+	<xs:complexType>
+		<xs:sequence>
+			<xs:element name="rezept" maxOccurs="unbounded">
+				<xs:complexType>
+					<xs:all maxOccurs="1">
+						<xs:element name="zutaten">
+								<xs:complexType>
+									<xs:sequence maxOccurs="unbounded"><!-- Hier sollten mehrere Zutaten gespeichert werden koennen -->
+										<xs:element name="zutat">
+											<xs:complexType>
+												<xs:attribute name="anzahl" type="xs:integer"/>
+												<xs:attribute name="einheit">
+													<xs:simpleType>
+														<xs:restriction base="xs:string">
+															<xs:enumeration value="g"/>
+															<xs:enumeration value="TL"/>
+															<xs:enumeration value="Pkt."/>
+															<xs:enumeration value="EL"/>
+															<xs:enumeration value="l"/>
+															<xs:enumeration value="ml"/>
+															<xs:enumeration value="Zehe/n"/>
+															<xs:enumeration value="evtl."/>
+															<xs:enumeration value="Bund"/>
+															<xs:enumeration value="Würfel"/>
+															<xs:enumeration value="Becher"/>
+															<xs:enumeration value=""/>
+														</xs:restriction>
+													</xs:simpleType>
+												</xs:attribute>
+												<xs:attribute name="zutatsname" type="xs:string"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						<xs:element name="zubereitung">
+							<xs:complexType>
+								<xs:attribute name="arbeitszeit" type="xs:integer" use="required"/>
+								<xs:attribute name="zeiteinheit" use="required">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="Min."/>
+											<xs:enumeration value="Std."/>
+										</xs:restriction>
+									</xs:simpleType>
+								</xs:attribute>
+								<xs:attribute name="schwierigkeitsgrad" use="required">
+									<xs:simpleType>
+										<xs:restriction base="xs:string">
+											<xs:enumeration value="simpel"/>
+											<xs:enumeration value="normal"/>
+											<xs:enumeration value="pfiffig"/>
+										</xs:restriction>
+									</xs:simpleType>	
+								</xs:attribute>
+								<xs:attribute name="brennwert" type="xs:integer" use="optional"/>
+							</xs:complexType>
+						</xs:element>
+						<xs:element name="zubereitungsschritte" type="xs:string"/>
+						<xs:element name="kommentare">
+							<xs:complexType>
+								<xs:sequence>
+									<xs:element name="kommentar" type="xs:string" maxOccurs="unbounded"/>
+								</xs:sequence>
+							</xs:complexType>
+						</xs:element>
+					</xs:all>
+										
+					<xs:attribute name="titel" type="xs:string" use="required"/>
+					<xs:attribute name="anzahlportionen" type="xs:integer" use="required">
+					
+				</xs:attribute>
+				</xs:complexType>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+</xs:element>
+</xs:schema>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rezeptliste xmlns="http://www.example.org/aufgabe3_teil_d">
+    <rezept titel="Kekse" anzahlportionen="2">
+        <zutaten>
+            <zutat anzahl="20" einheit="g" zutatsname="pulver"/>
+            <zutat anzahl="10" einheit="l" zutatsname="milch"/>
+        </zutaten>
+        <zubereitung arbeitszeit="2" zeiteinheit="Std." schwierigkeitsgrad="simpel" brennwert="250"/>
+        <zubereitungsschritte>Hier kommen alle schritte, die gefolgt werden muessen</zubereitungsschritte>
+        <kommentare>
+            <kommentar>hallo, sehr gut</kommentar>
+            <kommentar>geht nicht</kommentar>
+            <kommentar>hallo</kommentar>
+            <kommentar></kommentar>
+        </kommentare>
+    </rezept>
+    <rezept titel="Haenchen" anzahlportionen="2">
+        <zutaten>
+            <zutat anzahl="4" einheit="" zutatsname="Haenchenfilet"/>
+            <zutat anzahl="200" einheit="ml" zutatsname="Milch"/>
+        </zutaten>
+        <zubereitung arbeitszeit="5" zeiteinheit="Std." schwierigkeitsgrad="simpel" brennwert="512"/>
+        <zubereitungsschritte>alles mischen, dann essen0</zubereitungsschritte>
+        <kommentare>
+            <kommentar>schmeckt super</kommentar>
+            <kommentar>wie koche ich es?</kommentar>
+        </kommentare>
+    </rezept>
+</rezeptliste>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rezept>
+
+	<titel>Lenchen’s Schokoladenkuchen</titel>
+	<zutaten>
+		<zutat>
+			<menge>
+				<anzahl>200</anzahl>
+				<einheit>g</einheit>
+			</menge>
+			<zutatname>Butter</zutatname>
+		</zutat>
+		<zutat>
+			<menge>
+				<anzahl>200</anzahl>
+				<einheit>g</einheit>
+			</menge>
+			<zutatname>Zucker</zutatname>
+		</zutat>
+		<zutat>
+			<menge>
+				<anzahl>200</anzahl>
+				<einheit>g</einheit>
+			</menge>
+			<zutatname>Schokolade, Blockschokolade</zutatname>
+		</zutat>
+		<zutat>
+			<menge>
+				<anzahl>120</anzahl>
+				<einheit>g</einheit>
+			</menge>
+			<zutatname>Mehl</zutatname>
+		</zutat>
+		<zutat>
+			<menge>
+				<anzahl>1/2</anzahl>
+				<einheit>TL</einheit>
+			</menge>
+			<zutatname>Backpulver</zutatname>
+		</zutat>
+		<zutat>
+			<menge>
+				<anzahl>1</anzahl>
+				<einheit>Pkt.</einheit>
+			</menge>
+			<zutatname>Vanillezucker</zutatname>
+		</zutat>
+		<zutat>
+			<menge>
+				<anzahl>4</anzahl>
+				<einheit></einheit>
+			</menge>
+			<zutatname>Ei(er)</zutatname>
+		</zutat>
+	</zutaten>
+	
+	<anzahlportionen>16</anzahlportionen>
+	
+	<zubereitung>
+		<arbeitszeit> ca. 1 Std</arbeitszeit>
+		<schwierigkeitsgrad>normal</schwierigkeitsgrad>
+		<brennwertpP>295 kcal</brennwertpP>
+		<schritte>Butter und Schokolade [...] 40 – 50 Minuten backen.</schritte>
+	
+	</zubereitung>
+
+</rezept>
