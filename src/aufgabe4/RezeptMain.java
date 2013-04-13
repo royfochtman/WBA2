@@ -6,21 +6,26 @@ import javax.xml.bind.Unmarshaller;
 
 import aufgabe4.Rezeptliste;
 import aufgabe4.Rezeptliste.Rezept;
-import aufgabe4.Rezeptliste.Rezept.Kommentare;
 import aufgabe4.Rezeptliste.Rezept.Zutaten.Zutat;
 
+import java.io.BufferedReader;
 import java.io.File;
-import java.net.URL;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.List;
 import java.util.Scanner;
 
 public class RezeptMain {
 
 	/**
-	 * @param args
+	 * Methode zum Speichern der Rezepten
+	 * @param rezeptliste RezeptListe-Objekt
+	 * @param file File-Objekt mit URL, wo Datei gespeichert werden soll
 	 */
-	
 	public static void save(Rezeptliste rezeptliste, File file){
+		/*
+		 * Exception-Behandlung mit Try & Catch.
+		 */
 		try{
 			JAXBContext context = JAXBContext.newInstance("aufgabe4");
 			Marshaller m = context.createMarshaller();
@@ -35,14 +40,10 @@ public class RezeptMain {
 	public static void main(String[] args) throws Exception{
 		JAXBContext jc = JAXBContext.newInstance("aufgabe4"); //Packagename, wo sich die ObjectFactory.java Datei befindet
 	    Unmarshaller unmarshaller = jc.createUnmarshaller();
-	    
-	    
 	    /*
 	     * Neues Scanner-Objekt zum einlesen der Auswahl
 	     */
 	    Scanner sc = new Scanner(System.in);
-	    
-	    
 	    
 	    /*
 	     * XML-Datei zum einlesen importieren.
@@ -54,8 +55,6 @@ public class RezeptMain {
 	     */
 	    List<Rezept> rezeptListe = rezeptListeFile.rezept;
 
-	    
-	    
 	    /*
 	     * Auswahlmenue
 	     */
@@ -71,12 +70,16 @@ public class RezeptMain {
 	    switch(eingabe){
 	    case 1:
 	    	/* alle Rezepte ausgeben.*/
+	    	/* nicht implementiert. In der Aufgabe nicht gefordert.*/
 	    	break;
 	    case 2:
 	    	/* Rezept n auswaehlen. */
 	    	System.out.println("Geben Sie bitte den Index des gewuenschten Rezeptes ein: \n");
 	    	eingabe = sc.nextInt();
-	    	Rezept rezept = rezeptListe.get(eingabe);
+	    	Rezept rezept = rezeptListe.get(eingabe); //Rezept mit index "eingabe" wird von RezepzListe geholt
+	    	/*
+	    	 * Alle Daten werden nun ausgegeben.
+	    	 */
 	    	System.out.println("Zutaten:");
 	    	System.out.println("Rezeptname: " + rezept.titel);
 	    	if(rezept.zutaten != null){
@@ -90,9 +93,7 @@ public class RezeptMain {
 	    	System.out.println("Benoetigte Zeit: " + rezept.zubereitung.arbeitszeit + " " +
 	    	rezept.zubereitung.zeiteinheit + ", Schwierigkeitsgrad: " + rezept.zubereitung.schwierigkeitsgrad
 	    	+ ", Brennwert p. P." + rezept.zubereitung.brennwert + " Kcal.\n");
-	    	
 	    	System.out.println(rezept.zubereitungsschritte);
-	    	
 	    	System.out.println("Kommentare: ");
 	    	
 	    	for(String kommentar: rezept.kommentare.kommentar){
@@ -101,12 +102,22 @@ public class RezeptMain {
 	    	
 	    	System.out.println("\n\n Kommentar hinzufuegen: \n");
 	    	
-	    	String kommentar = sc.next();
-	    	
-	    	rezept.kommentare.kommentar.add(kommentar);
-	    	
+	    	/*
+	    	 * Eine Zeile als Kommentar einlesen.
+	    	 */
+			String s = null;
+	    	try {
+	            BufferedReader in = new BufferedReader(
+	                 new InputStreamReader(System.in) );
+	            s = in.readLine();
+	        } catch( IOException ex ) {
+	            System.out.println( ex.getMessage() );
+	        }
+	    	rezept.kommentare.kommentar.add(s);
+	    	/*
+	    	 * Rezept speichern
+	    	 */
 	    	save(rezeptListeFile, new File("src/aufgabe3/aufgabe3_teil_d_XML_final.xml"));
-	    	
 	    	
 	    	break;
 	    }

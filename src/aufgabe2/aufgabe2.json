@@ -1,6 +1,13 @@
 {
 "formular": [
-{ "vorname":"Roy", "nachname":"Fochtman", "email":"roy@test.de", "geburtsdatum":"16.01.2000", "erfahrung":"amateur", "schlagzeug":"vorhanden", "anmerkung":"keine Anmerkung"},
-{ "vorname":"Monica", "nachname":"Chou", "email":"monica@test.de", "geburtsdatum":"16.01.1990", "erfahrung":"amateur", "schlagzeug":"vorhanden", "anmerkung":"Halli Hallo"}
+{ "vorname":"Roy", "nachname":"Fochtman", 
+"email":"roy@test.de", "geburtsdatum":"16.01.2000", 
+"erfahrung":"amateur", "schlagzeug":"vorhanden", 
+"anmerkung":"keine Anmerkung"},
+
+{ "vorname":"Monica", "nachname":"Chou", 
+"email":"monica@test.de", "geburtsdatum":"16.01.1990", 
+"erfahrung":"amateur", "schlagzeug":"vorhanden", 
+"anmerkung":"Halli Hallo"}
 ]
 }

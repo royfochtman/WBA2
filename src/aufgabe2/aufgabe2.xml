@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?> <!-- XML Declaration, defines XML version and the encoding used -->
 <formular> <!-- root element -->
-<vorname>Roy</vorname>
-<nachname>Fochtman</nachname>
-<email>roy@test.de</email>
-<geburtsdatum>16.01.2000</geburtsdatum>
-<erfahrung>amateur</erfahrung>
-<schlagzeug>vorhanden</schlagzeug>
-<anmerkung>keine Anmerkung</anmerkung>
-
+	<anmeldung>
+		<vorname>Roy</vorname>
+		<nachname>Fochtman</nachname>
+		<email>roy@test.de</email>
+		<geburtsdatum>16.01.2000</geburtsdatum>
+		<erfahrung>amateur</erfahrung>
+		<schlagzeug>vorhanden</schlagzeug>
+		<anmerkung>keine Anmerkung</anmerkung>
+	</anmeldung>
+	
+	<anmeldung>
+		<vorname>Monica</vorname>
+		<nachname>Chou</nachname>
+		<email>monica@test.de</email>
+		<geburtsdatum>16.01.1990</geburtsdatum>
+		<erfahrung>amateur</erfahrung>
+		<schlagzeug>vorhanden</schlagzeug>
+		<anmerkung>Halli Hallo</anmerkung>
+	</anmeldung>
 </formular>

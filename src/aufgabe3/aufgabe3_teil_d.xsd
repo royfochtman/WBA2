@@ -67,11 +67,9 @@
 								</xs:sequence>
 							</xs:complexType>
 						</xs:element>
-					</xs:all>
-										
+					</xs:all>		
 					<xs:attribute name="titel" type="xs:string" use="required"/>
 					<xs:attribute name="anzahlportionen" type="xs:integer" use="required">
-					
 				</xs:attribute>
 				</xs:complexType>
 			</xs:element>
